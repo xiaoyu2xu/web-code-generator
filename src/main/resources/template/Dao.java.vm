@@ -1,0 +1,15 @@
+package ${package}.${moduleName}.dao;
+
+import ${package}.${moduleName}.entity.${className};
+import org.education.platform.core.mybatisplus.extension.ExtendedMapper;
+
+/**
+ * ${comments}
+ * 
+ * @author ${author}
+ * @email ${email}
+ * @date ${datetime}
+ */
+public interface ${className}Dao extends ExtendedMapper<${className}> {
+	
+}

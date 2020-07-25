@@ -1,0 +1,46 @@
+# Tomcat
+server:
+    tomcat:
+        uri-encoding: UTF-8
+        max-threads: 1000
+        min-spare-threads: 30
+    port: 8080
+   
+    servlet:
+        context-path: /
+
+spring:
+  resources:
+            static-locations: classpath:/static/,classpath:/views/
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    #MySQL配置
+    # driver-class-name: com.mysql.cj.jdbc.Driver
+    # url: jdbc:mysql://127.0.0.1:3306/research_travel?serverTimezone=UTC&characterEncoding=utf8&useUnicode=true&useSSL=false&allowPublicKeyRetrieval=true
+    # username: root
+    # password: root
+    #oracle配置
+    #    driverClassName: oracle.jdbc.OracleDriver
+    #    url: jdbc:oracle:thin:@47.100.206.162:1521:xe
+    #    username: renren
+    #    password: 123456
+    #SQLServer配置
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://192.168.2.199:1433;DatabaseName=mydatahlj
+    username: sa
+    password: Llwy123
+    #PostgreSQL配置
+  #    driverClassName: org.postgresql.Driver
+  #    url: jdbc:postgresql://192.168.10.10:5432/renren_fast
+  #    username: postgres
+  #    password: 123456
+
+  jackson:
+        time-zone: GMT+8
+        date-format: yyyy-MM-dd HH:mm:ss
+
+#
+# Mybatis配置
+mybatis:
+    mapperLocations: classpath:mapper/**/*.xml
+

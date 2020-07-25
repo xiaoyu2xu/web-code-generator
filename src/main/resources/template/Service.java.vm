@@ -1,0 +1,24 @@
+package ${package}.${moduleName}.service;
+
+import com.baomidou.mybatisplus.extension.service.IService;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import ${package}.${moduleName}.entity.${className};
+import org.education.platform.common.search.Searchable;
+import java.util.List;
+
+/**
+ * @author ${author}
+ * @email ${email}
+ * @date ${datetime}
+ */
+public interface ${className}Service extends IService<${className}> {
+
+    IPage<${className}> selectPage(Searchable searchable);
+
+    List<${className}> selectList(Searchable searchable);
+    
+    Integer deleteBatchIds(List<${pk.attrType}> idList);
+    
+   
+}
+
